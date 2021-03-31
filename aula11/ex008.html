@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+</head>
+<body>
+    <h1>Imigração</h1>
+    <input type="text" name="txtPais" id="txtPais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar(){
+            var pais = document.querySelector('input#txtPais').value;
+            var res = document.querySelector('div');
+            res.innerHTML = `<p>Mora no(a) ${pais}</p>`;
+            if (pais.toLowerCase() == 'brasil'){
+                res.innerHTML = `<p>Você é Brasileiro!</p>`;
+            }
+            else{
+                res.innerHTML = `<p>Você é Estrangeiro!</p>`;
+            }
+        }
+    </script>
+
+</body>
+</html>
